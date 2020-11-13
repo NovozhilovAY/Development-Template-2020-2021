@@ -125,6 +125,25 @@ TData TMultistack::Get(int ns)
 	return tmp;
 }
 
+void TMultistack::revers()
+{
+	TMultistack tmp;
+	for (int i = 0; i < StackNum; i++)
+	{
+		while (!IsEmpty(i))
+		{
+			tmp.Put(StackNum - i - 1, Get(i));
+		}
+	}
+	for (int i = 0; i < StackNum; i++)
+	{
+		while (!tmp.IsEmpty(i))
+		{
+			Put(i, tmp.Get(i));
+		}
+	}
+}
+
 void TMultistack::print()
 {
 	int i1, i2;

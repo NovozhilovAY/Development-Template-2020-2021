@@ -19,6 +19,7 @@ public:
 	bool IsFull(int ns)const;
 	virtual void Put(int ns, const TData& Val);
 	virtual TData Get(int ns);
+	void revers();
 	int GetRelocationCount() { return RelocationCount; }
 	void print();
 };
