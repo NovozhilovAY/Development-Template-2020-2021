@@ -121,3 +121,18 @@ TEST(polishConvertor, solution_of_difficult_expression_3)
 	double res = pc.Calculate();
 	EXPECT_TRUE(eq((-1984), res));
 }
+TEST(polishConvertor, can_add_var)
+{
+	PolishConvertor pc;
+	pc.ConvertToPolish("a+2");
+	EXPECT_NO_THROW(pc.AddVar("a",2));
+}
+TEST(polishConvertor, can_calculate_with_vars)
+{
+	PolishConvertor pc;
+	pc.ConvertToPolish("a+b+c-10");
+	pc.AddVar("a", 1);
+	pc.AddVar("b", 2);
+	pc.AddVar("c", 3);
+	EXPECT_TRUE(eq(pc.Calculate(),-4));
+}
