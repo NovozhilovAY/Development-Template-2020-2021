@@ -1,0 +1,27 @@
+Glava 2
+{
+2.1 Polinomy
+{
+2.1.1 Opredelenie
+2.1.2 Struktura
+}
+2.2Teksty
+{
+2.2.1 Opredelenie
+2.2.2 Struktura
+}
+}
+Glava 3
+{
+3.1
+{
+3.1.1
+{
+3.1.1.1
+{
+3.1.1.1.1
+}
+}
+}
+3.2
+}
