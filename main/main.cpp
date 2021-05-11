@@ -1,9 +1,13 @@
 #include <stdio.h>
-#include "add.h"
+#include "HashTable.h"
 
 int main() {
-  printf("hello!\n");
-  printf("%d\n", add(1, 2));
-
+	HashTable h;
+	h.printTable();
+	h.add(7);
+	h.add(3);
+	h.add(228);
+	h.add(-4);
+	h.printTable();
   return 0;
 }
